@@ -2,8 +2,8 @@ package com.cfed.thread;
 public class ThreadRunExample {
 
     public static void main(String[] args){
-        Thread t1 = new Thread(new HeavyWorkRunnable(), "t1");
-        Thread t2 = new Thread(new HeavyWorkRunnable(), "t2");
+        Thread t1 = new Thread(new ConsumerfedThread(), "t1");
+        Thread t2 = new Thread(new ConsumerfedThread(), "t2");
         System.out.println("Starting Runnable threads");
         t1.start();
         t2.start();
