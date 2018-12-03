@@ -30,19 +30,24 @@ public class MissingSortedNumber {
 	}
 
 	private int findMissingNumber(int[] sortedArray,int start, int end) {
+		int finalValue = end;
 		int len = sortedArray.length;
 		int mid = len/2;
 		int value = start+mid;
-		if(sortedArray[mid]==value) {
+		if(len==2) {
+			if(end-start!=1) {
+				return start + 1;
+			}
+		}else if(sortedArray[mid]==value) {
 			int[] newArray = Arrays.copyOfRange(sortedArray, mid, len);
-			findMissingNumber(newArray,value,len+1);
+			findMissingNumber(newArray,value,finalValue);
 		}else if(sortedArray[mid]>value) {
-			int[] newArray = Arrays.copyOfRange(sortedArray,0, mid);
-			findMissingNumber(newArray,start,len+1);
+			int[] newArray = Arrays.copyOfRange(sortedArray,0, mid+1);
+			findMissingNumber(newArray,start,sortedArray[mid]);
 		}else {
-			findMissingNumber(sortedArray,1,10);
+			findMissingNumber(sortedArray,0,0);
 		}
-		return 0;
+		return start + 1;
 	}
 
 }
