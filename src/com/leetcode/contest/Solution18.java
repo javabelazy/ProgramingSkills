@@ -16,9 +16,7 @@ package com.leetcode.contest;
 class Solution18 {
 
 	public int[] sortArrayByParity(int[] A) {
-
 		int even = 0;
-//		int ptr = 0;
 		for (int i = 0; i < A.length; i++) {
 			if(A[i] % 2 == 0) {
 				int temp = A[even];
@@ -27,7 +25,6 @@ class Solution18 {
 				even++;
 			}
 		}
-
 		return A;
 	}
 
