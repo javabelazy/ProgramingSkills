@@ -8,6 +8,7 @@ import java.util.Scanner;
 
 /**
  * @author kzn
+ * 
  *
  */
 public class NumberToWord {
