@@ -18,16 +18,16 @@ import java.util.Map;
 class Solution19 {
 	public boolean wordPattern(String pattern, String str) {
 
-		Map<Character,String> map = new HashMap<>();
+		Map<String,Character> map = new HashMap<>();
 		String[] value = str.split("\\s");
 		
-		for(int i=0;i<pattern.length(); i++) {
-			char ch = pattern.charAt(i);
-			if(map.get(ch)!=null) {
-				if(!map.get(ch).equals(value[i]))
+		for(int i=0;i<value.length; i++) {
+			String val = value[i];
+			if(map.get(val)!=null) {
+				if(!map.get(val).equals(str.charAt(i)))
 					return false;
 			}
-			map.put(ch, value[i]);
+			map.put(val, str.charAt(i));
 		}
 		
 		
@@ -37,10 +37,10 @@ class Solution19 {
 	public static void main(String[] args) {
 		
 //		String pattern = "abba";
-//		String str = "dog cat cat dog";
+		String str = "dog cat cat dog";
 		String pattern = "abba";
 //		String str = "dog cat cat fish";
-		String str = "dog dog dog dog";
+//		String str = "dog dog dog dog";
 		System.out.println(new Solution19().wordPattern(pattern, str));
 	}
 }

@@ -25,6 +25,8 @@ class Solution23 {
 		
 		while(span) {
 			
+			
+			
 		}
 
 		return null;

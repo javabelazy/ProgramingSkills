@@ -1,12 +1,15 @@
 package com.leetcode.contest;
+
 /**
- * Given an array, rotate the array to the right by k steps, where k is non-negative.
-
-Follow up:
-
-Try to come up as many solutions as you can, there are at least 3 different ways to solve this problem.
-Could you do it in-place with O(1) extra space?
- * @author Apple
+ * Given an array, rotate the array to the right by k steps, where k is
+ * non-negative.
+ * 
+ * Follow up:
+ * 
+ * Try to come up as many solutions as you can, there are at least 3 different
+ * ways to solve this problem. Could you do it in-place with O(1) extra space?
+ * 
+ * @author Athul
  *
  */
 class Solution21 {
@@ -19,7 +22,7 @@ class Solution21 {
 		int start = nums.length - k;
 
 		for (int i = 0; i < k; i++) {
-			
+
 			temp[i] = nums[start];
 			start++;
 		}
@@ -47,7 +50,7 @@ class Solution21 {
 
 	public static void main(String[] args) {
 		Solution21 s = new Solution21();
-		int[] nums = { -1};
+		int[] nums = { -1 };
 		s.rotate(nums, 2);
 	}
 }
