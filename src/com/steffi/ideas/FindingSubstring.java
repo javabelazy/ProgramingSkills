@@ -15,6 +15,7 @@ import java.util.regex.Pattern;
  *         The program will get list of ID from the string using regex
  *         </p>
  * 
+ * <p> output of the program </p>
  *         ID Pancard 
  *         ID Aadhaar 
  *         ID DrivingLicence
@@ -23,7 +24,7 @@ import java.util.regex.Pattern;
  */
 public class FindingSubstring {
 	public static void main(String[] args) {
-		String input = "I user abc is has with the following Identities ID: Pancard, ID: Aadhaar, ID: DrivingLicence";
+		String input = "The user: jhon has the following Identities ID: Pancard, ID: Aadhaar, ID: DrivingLicence submitted";
 		Pattern p = Pattern.compile("(ID):\\s*(\\w+)");
 		Matcher m = p.matcher(input);
 		while (m.find()) {
