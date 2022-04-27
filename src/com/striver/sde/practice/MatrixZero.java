@@ -62,7 +62,8 @@ public class MatrixZero {
 		}
 		
 		
-		System.out.println(input);
+		System.out.println(input); // output
+		
 	}
 
 	private void findSolution(int[][] input) {
